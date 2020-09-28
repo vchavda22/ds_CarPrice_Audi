@@ -4,9 +4,9 @@
 
 * Created a tool that estimates Used Car Prices of Audi's (in the UK), with a MAE of ~$4.1K, to give me a rough indication on whether or not I got a good deal for my Audi A3!!!.
 * Took a selection of ~10K used Audis from https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes
-* Engineered features from the text of each car description to quantify the value put on a vehicle being Diesel or Petrol, Automatic vs Manual transmission .
+* Engineered features from the text of each car description to quantify the value put on a vehicle being Diesel or Petrol, Automatic vs Manual transmission.
 * Optimised Linear, Lasso and Random Forest Regressors using GridSearchCV to reach best model.
-* Built a client facing API using Flask.
+
 
 ## Code and Resources Used
 
@@ -15,9 +15,8 @@
 * Packages: pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle
 * For web requirements: pip install -r requirements.txt
 * For scraper, see below:
-  * @author: arapfaik
-  * GitHub : https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes
-* Flask Productionise : https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2
+  * @author: Aditya
+  * Kaggle : https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes
 * Mark Down cheat sheet : https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 ## YouTube Walkthrough
@@ -27,12 +26,15 @@
 
 ## Data Cleaning
  
-The data obtained was fairly clean, but i had to run a few commands to take out it required cleaning so it was usable for the model. The following changes were made and variables created:
+The data obtained was fairly clean, but i had to run a few commands to further categorise the data. The following changes were made and variables created:
   * Made columns for if different skills were listed in the job descriptions:
    * Diesel
    * Petrol
+   * Hybrid
    * Manual
+   * Semi-Automatic
    * Automatic
+   * Split the Audis into models (A, T, S, R and Q series)
   
   
   ## EDA - Exploratory Data Analysis
@@ -53,11 +55,9 @@ The data obtained was fairly clean, but i had to run a few commands to take out 
   
   ## Model Performance
   
-  The Random Forest model far outperformed the other approaches on the test and validation sets.
+  The Random Forest model outperformed the other approaches on the test and validation sets.
   
    * Random Forest : MAE = 4.1
-   * Linear Regression : MAE = 18.7
-   * Ridge Regression : MAE = 18.9
+   * Linear Regression : MAE = 4.6
+   * Ridge Regression : MAE = 4.6
   
-  ## Productionisation
-In this step, a flask API endpoint that was hosted on a local webserver was built. This was done following a TDS tutorial in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary.
