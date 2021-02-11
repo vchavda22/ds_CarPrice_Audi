@@ -61,3 +61,23 @@ The data obtained was fairly clean, but i had to run a few commands to further c
    * Linear Regression : MAE = 4.6
    * Ridge Regression : MAE = 4.6
   
+  
+  ## Additional Tests:
+  
+  Created a Jupyter Notebook (Audi_EDA_modeling.ipynb) where additional paramters were fed into the fitting. These were:
+   * tax
+   * mpg
+   * engine size
+   
+   Using these additional paramters, the model performance was measured again for Multiple Linear Regression and Random Forrest.
+   The data was split into train and test sets with a test size of 30% this time round.
+   
+   * Linear Regression : MAE = 3.1 (R^2 = 0.84)
+   * Random Forest : MAE = 1.7 (R^2 = 0.95)
+   
+   We see with the additional parameters, a significant improvement over the previous methodology run.
+   
+   ## Closing remarks
+   
+   I tested my own Audi within this machinary and I unfortunately got an unrealistic price (£3.6K, when the car would now be worth less than £1K, if that). I think to improve this, I would need more data at the lower price end (and higher age range). But this is a work in progress.
+   
