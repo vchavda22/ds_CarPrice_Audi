@@ -44,7 +44,7 @@ The data obtained was fairly clean, but i had to run a few commands to further c
   
   ## Model Building
   
-  First, the categorical variables were transformed into dummy variables. The data was split into train and test sets with a test size of 20%.
+  First, the categorical variables were transformed into dummy variables. The data was split into train and test sets with a test size of 30%.
   
   Three different models were tried, and were evaluated using Mean Absolute Error (MAE). MAE was chosen as it's relatively easy to interpret and outliers aren't particularly bad for this type of model.
   
@@ -70,7 +70,7 @@ The data obtained was fairly clean, but i had to run a few commands to further c
    * engine size
    
    Using these additional paramters, the model performance was measured again for Multiple Linear Regression and Random Forrest.
-   The data was split into train and test sets with a test size of 30% this time round.
+   The data was split into train and test sets with a test size of 30%.
    
    * Linear Regression : MAE = 3.1 (R^2 = 0.84)
    * Random Forest : MAE = 1.7 (R^2 = 0.95)
