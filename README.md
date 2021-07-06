@@ -2,7 +2,7 @@
 
 # Data Science Audi Car Price Estimator : Project Overview
 
-* Created a tool that estimates Used Car Prices of Audi's (in the UK), with a MAE of ~$4.1K, to give me a rough indication on whether or not I got a good deal for my Audi A3!!!.
+* Created a tool that estimates Used Car Prices of Audi's (in the UK), with a MAE of ~£4.1K, to give me a rough indication on whether or not I got a good deal for my Audi A3!!!.
 * Took a selection of ~10K used Audis from https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes
 * Engineered features from the text of each car description to quantify the value put on a vehicle being Diesel or Petrol, Automatic vs Manual transmission.
 * Optimised Linear, Lasso and Random Forest Regressors using GridSearchCV to reach best model.
@@ -39,7 +39,7 @@ The data obtained was fairly clean, but i had to run a few commands to further c
   
   ## EDA - Exploratory Data Analysis
   
-  Looked at the distributions of the data and the value counts for the various categoriacal variables. Below are the highlights from the pivot tables.
+  Looked at the distributions of the data and the value counts for the various categoriacal variables. 
   
   
   ## Model Building
